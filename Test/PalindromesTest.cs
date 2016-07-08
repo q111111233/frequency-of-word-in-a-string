@@ -23,6 +23,12 @@ namespace Frequency
       WordFrequency word = new WordFrequency("password", "password is PASSWORD");
       Assert.Equal(2, word.Find());
     }
+    [Fact]
+    public void WordFrequency_test_EmptyString_case()
+    {
+      WordFrequency word = new WordFrequency("password", "");
+      Assert.Equal(0, word.Find());
+    }
 
   }
 }

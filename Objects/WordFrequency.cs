@@ -6,7 +6,7 @@ namespace Frequency.Objects
   {
     private string _word;
     private string _sentence;
-    private int _counter;
+    private int _counter = 0;
 
     public WordFrequency(string word, string sentence)
     {
