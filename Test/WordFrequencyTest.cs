@@ -35,6 +35,5 @@ namespace Frequency
       RepeatCounter word = new RepeatCounter("password", "password is 'password'!");
       Assert.Equal(2, word.CountRepeats());
     }
-
   }
 }

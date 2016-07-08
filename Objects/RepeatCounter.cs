@@ -7,7 +7,7 @@ namespace Frequency.Objects
     private string _word;
     private string _sentence;
     private int _counter = 0;
-    string[] stringSeparators = new string[] {" ", "!", "\"", "'", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", ":", ";", "<", ">", ",", ".", "?", "/"};
+    string[] stringSeparators = new string[] {" ", "!", "\"", "'", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", "|", "\\", ":", ";", "<", ">", ",", ".", "?", "/"};
 
     public RepeatCounter (string word, string sentence)
     {
