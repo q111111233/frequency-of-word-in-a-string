@@ -10,7 +10,7 @@ namespace Frequency.Objects
 
     public WordFrequency(string word, string sentence)
     {
-      _word = word;
+      _word = word.ToLower();
       _sentence = sentence;
     }
 
