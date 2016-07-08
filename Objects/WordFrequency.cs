@@ -1,14 +1,15 @@
-using System.Collections.Generic;
+using System;
 
 namespace Frequency.Objects
 {
-  public class WordFrequency
+  public class RepeatCounter
   {
     private string _word;
     private string _sentence;
     private int _counter = 0;
+    string[] stringSeparators = new string[] {" ", "!", "\"", "'", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", "{", "}", "[", "]", ":", ";", "<", ">", ",", ".", "?", "/"};
 
-    public WordFrequency(string word, string sentence)
+    public RepeatCounter (string word, string sentence)
     {
       _word = word.ToLower();
       _sentence = sentence.ToLower();
@@ -38,16 +39,15 @@ namespace Frequency.Objects
     {
       _counter = newCounter;
     }
-    public int Find()
+    public int CountRepeats()
     {
-      string[] words = _sentence.Split(' ');
+      string[] words = _sentence.Split(stringSeparators, StringSplitOptions.None);
       for(int i=0; i<words.Length; i++)
       {
         if(words[i] == _word)
         _counter++;
       }
       return _counter;
-
     }
   }
 }
